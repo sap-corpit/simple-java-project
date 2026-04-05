@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-               git branch: 'main', credentialsId: 'jenkins-github-ssh-key', url: 'git@github.com:sap-corpit/simple-java-project.git'
+               //git branch: 'main', credentialsId: 'jenkins-github-ssh-key', url: 'git@github.com:sap-corpit/simple-java-project.git'
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
 
